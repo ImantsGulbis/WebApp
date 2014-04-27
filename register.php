@@ -8,15 +8,15 @@ $tbl_name="users"; // Table name
 mysql_connect("$host", "$username", "$password")or die("cannot connect");
 mysql_select_db("$db_name")or die("cannot select DB");
 $user = $_POST['username'];
-$user=stripslashes($user)
+$user=stripslashes($user);
 $user=mysql_real_escape_string($user);
 
 $email = $_POST['email'];
-$email=stripslashes($email)
+$email=stripslashes($email);
 $email=mysql_real_escape_string($email);
 
 $pass = $_POST['password'];
-$pass=stripslashes($pass)
+$pass=stripslashes($pass);
 $pass=mysql_real_escape_string($pass);
 
 $rep = $_POST['repassword'];
