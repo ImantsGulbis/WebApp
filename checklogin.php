@@ -21,7 +21,7 @@ if(!($myusername == "")){
 		$myusername = mysql_real_escape_string($myusername);
 		$mypassword = mysql_real_escape_string($mypassword);
 
-		//$mypassword = md5($mypassword);
+		$mypassword = md5($mypassword);
 
 		$sql="SELECT * FROM $tbl_name WHERE user='$myusername' and password='$mypassword'";
 		$result=mysql_query($sql);
